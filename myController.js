@@ -14,3 +14,18 @@ function myIndexController () {
       location: 'Forever21'
   };
 }
+
+vm.albums = [
+  {
+    price: $20,
+    location: 'Forever21'
+  },
+  {
+    price: $20,
+    location: 'Forever21'
+  },
+  {
+    price: $20,
+    location: 'Forever21'
+  }
+];
