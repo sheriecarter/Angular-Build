@@ -18,6 +18,8 @@
  <div class='container' ng-controller='myIndexController as myIndexCtrl'>
   <p><b>myIndexCtrl.newOutfit:</b> {{myIndexCtrl.newOutfit}}</p>
  </div>
-
+<div ng-repeat="outfit in myIndexCtrl.outfit">
+  {{outfit}}
+</div>
 </body>
 </html>
