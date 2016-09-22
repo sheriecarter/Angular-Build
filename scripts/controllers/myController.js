@@ -1,6 +1,6 @@
-angular
-  .module ('myApp' [])
-  .controller('myIndexController', myIndexController);
+// angular
+//   .module ('myApp' [])
+//   .controller('myIndexController', myIndexController);
 
 
 
@@ -9,13 +9,13 @@ function myIndexController () {
   vm.newOutfit = {};
 
   vm.newOutfit = {
-      // image: 
+      // image:
       price: $20,
       location: 'Forever21'
   };
 }
 
-vm.albums = [
+vm.outfits = [
   {
     price: $20,
     location: 'Forever21'

@@ -1,25 +1,118 @@
 <!DOCTYPE html>
- <html lang="en" ng-app="myApp">
+ <!-- <html lang="en" ng-app="myApp"> -->
+ <html lang="en" ng-app="CardsAgainstAssembly">
 <head>
-   <!-- STYLESHEETS -->
-    <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/styles/styles.css">
-    
-  <!-- VENDOR SCRIPTS -->
-    <script src="/vendor/angular/angular.min.js"></script>
-    
-  <!-- APPLICATION SCRIPTS -->
-    <script src="/scripts/app.js"></script>
+  <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Sherie Carter Portfolio</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="styles/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script> -->
+        <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+        <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+        <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+
+
+        <script src="scripts/app.js"></script>
+  <script src="scripts/controllers/cardsController.js"></script>
+
+  <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+      <script src="scripts/directives/cardDirective.js"></script>
 </head>
 <body>
- <div>
-   <h1> Cheap Basics </h1>
- </div>
- <div class='container' ng-controller='myIndexController as myIndexCtrl'>
+
+ <!-- <div class='container' ng-controller='myIndexController as myIndexCtrl'>
   <p><b>myIndexCtrl.newOutfit:</b> {{myIndexCtrl.newOutfit}}</p>
  </div>
 <div ng-repeat="outfit in myIndexCtrl.outfit">
-  {{outfit}}
+  {{outfit}} -->
+<!-- </div> -->
+<div class="container">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+     <p class="navbar-text shout">Sherie Carter</p>
+     <div id="navbar" class="navbar-collapse collapse">
+         <ul class="nav navbar-nav navbar-right">
+           <li><a href="#work-experiences">Portfolio</a></li>
+           <!-- <li class="bullet">&bull;</li> -->
+           <li><a href="#about">About</a></li>
+           <!-- <li class="bullet">&bull;</li> -->
+           <li><a href="#contact">Contact</a></li>
+         </ul>
+       </div>
+    </div>
+
+  </nav>
 </div>
+
+
+  <div class="container-fluid middle text-center">
+    <h1 id="sherie">Sherie Carter</h1>
+    <img class="picOfMe" src="/selfie.png">
+    <h2> Full Stack Web Developer </h2>
+
+
+
+</div>
+  <div class="container-fluid portfolio text-center">
+    <p><h1>Portfolio</h1></p>
+    <!-- <div class="col-sm-4">
+    <div class="card card-inverse">
+    <img class="card-img portfoliopicture" src="http://pixdaus.com/files/items/pics/8/46/551846_3a34c11dada291a6dd13dbf498160721_large.jpg" alt="Card image">
+    <div class="card-img-overlay">
+      <h4 class="card-title">{{title}}</h4>
+      <p class="card-text"> Me </p
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      <a href="http://scontent.cdninstagram.com/t51.2885-19/s150x150/12750035_943300595717943_2127711694_a.jpg"></a>
+    </div>
+
+    </div>
+    </div> -->
+
+    <!-- card controller I attempted to make
+    <div id="cards" class="container-fluid" ng-controller="cardsController as cardsCtrl">
+      <h1> Sherie Carter </h1>
+    <div class="row"
+    <div ng-repeat="card in cardsCtlr.cardList">
+     <portfolio-card title="{{card.title}}"></portfolio-card>
+   </div>
+ </div>
+ </div> -->
+ <section id="cards" class="container-fluid" ng-controller="cardsController as cardsCtrl">
+
+
+
+         <div class="row">
+<!-- <h1>Testing</h1> -->
+           <div class="col-sm-4 col-md-4 col-lg-4" ng-repeat="card in cardsCtrl.questionsList" >
+             <wdi-card image="{{card.image}}" question="{{card.question}}"></wdi-card>
+
+
+           </div>
+
+         </div>
+       </section>
+
+  </div>
+
+
+
+
+
+  <div class="container-fluid end text-center">
+    <p><h1>Contact Me</h1></p>
+    <h2><a href="mailto:sherie1.carter@gmail.com"> sherie1.carter@gmail.com </a></h2>
+     <a target="_blank" href="https://www.linkedin.com/in/sheriecarter"> <img src="/linkedIn.png"> </a>
+  </div>
+
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script> -->
+
 </body>
 </html>
