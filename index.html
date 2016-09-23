@@ -1,6 +1,5 @@
 <!DOCTYPE html>
- <!-- <html lang="en" ng-app="myApp"> -->
- <html lang="en" ng-app="CardsAgainstAssembly">
+ <html lang="en" ng-app='portfolioApp'>
 <head>
   <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +9,6 @@
         <link rel="stylesheet" href="styles/style.css">
         <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script> -->
         <script src="bower_components/angular/angular.min.js"></script>
         <script src="bower_components/angular-route/angular-route.min.js"></script>
         <script src="bower_components/angular-animate/angular-animate.min.js"></script>
@@ -24,13 +22,6 @@
         <script src="scripts/directives/cardDirective.js"></script>
 </head>
 <body>
-
- <!-- <div class='container' ng-controller='myIndexController as myIndexCtrl'>
-  <p><b>myIndexCtrl.newOutfit:</b> {{myIndexCtrl.newOutfit}}</p>
- </div>
-<div ng-repeat="outfit in myIndexCtrl.outfit">
-  {{outfit}} -->
-<!-- </div> -->
 <div ng-controller="pageController" class="container">
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -87,9 +78,9 @@
 
 
          <div class="row">
-<!-- <h1>Testing</h1> -->
-           <div class="col-sm-4 col-md-4 col-lg-4" ng-repeat="card in cardsCtrl.questionsList" >
-             <wdi-card image="{{card.image}}" question="{{card.question}}"></wdi-card>
+
+           <div class="col-sm-4 col-md-4 col-lg-4" ng-repeat="card in cardsCtrl.stuffInCard" >
+             <portfolio-card image="{{card.image}}" title="{{card.title}}"></portfolio-card>
 
 
            </div>
@@ -109,10 +100,6 @@
      <a target="_blank" href="https://www.linkedin.com/in/sheriecarter"> <img src="/linkedIn.png"> </a>
   </div>
 
-
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script> -->
 
 </body>
 </html>

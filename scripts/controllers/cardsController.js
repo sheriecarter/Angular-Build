@@ -1,16 +1,4 @@
-// angular
-//   .module('myApp')
-//   .controller('cardsController', cardsController);
-
-  // function cardsController(){
-  //   var vm=this;
-  //   vm.cardList =[
-  //     {title: "Project 1"}
-  //   ]
-  // }
-
-
-  angular.module('CardsAgainstAssembly')
+  angular.module('portfolioApp')
     .controller('cardsController', cardsController);
 
 
@@ -18,35 +6,35 @@
     var vm = this;
 
 
-    vm.questionsList=[
+    vm.stuffInCard=[
       {
-        question: "MY Site",
+        title: "MY Site",
         image: "selfie.png"
       },
 
       {
-        question: "Personal Site",
+        title: "Personal Site",
         image: "selfie.png"
       },
 
       {
-        question: "Tic Tac Toe",
+        title: "Tic Tac Toe",
         image: "selfie.png"
       },
 
       {
-        question: "HangMan",
+        title: "HangMan",
         image: "selfie.png"
       },
 
       {
-        question: "Tunely Angular",
+        title: "Tunely Angular",
         image: "selfie.png"
       },
 
 
       {
-        question: "Book App",
+        title: "Book App",
         image: "selfie.png"
       }
 

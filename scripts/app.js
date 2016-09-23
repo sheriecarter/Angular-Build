@@ -1,3 +1,3 @@
 // angular.module('myApp', ['ngAnimate', 'ngSanitize','ui.bootstrap']);
 
-angular.module('CardsAgainstAssembly', []);
+angular.module('portfolioApp', []);

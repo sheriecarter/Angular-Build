@@ -1,23 +1,7 @@
-// angular.module('myApp')
-//   .directive('portfolioCard', portfolioCard);
-//
-//   function portfolioCard(){
-//     var directive = {
-//
-//       restrict: 'E',
-//       replace: true,
-//       templateUrl: '/templates/cardDirective.html'
-//       // scope: {
-//       //   title: '@'
-//       // };
-//     };
-//     return directive;
-//   }
+angular.module('portfolioApp')
+  .directive('portfolioCard', portfolioCard);
 
-angular.module('CardsAgainstAssembly')
-  .directive('wdiCard', wdiCard);
-
-function wdiCard(){
+function portfolioCard(){
   var directive = {
     //'A' == attribute, 'E' == element, 'C' == class
     restrict: 'EA',
@@ -25,7 +9,7 @@ function wdiCard(){
     controller: WdiCardController,
     controllerAs: 'wdiCardCtrl',
     scope:{
-      question: '@',
+       title: '@',
        image: '@'
     }
   };
