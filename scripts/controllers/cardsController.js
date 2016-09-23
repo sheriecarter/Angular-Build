@@ -12,6 +12,8 @@
 
   angular.module('CardsAgainstAssembly')
     .controller('cardsController', cardsController);
+
+
   function cardsController(){
     var vm = this;
 
@@ -50,6 +52,3 @@
 
     ]
   }
-  function WdiCardController(){
-  var vm = this;
-}

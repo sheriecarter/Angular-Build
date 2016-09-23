@@ -8,20 +8,20 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
         <link rel="stylesheet" href="styles/style.css">
+        <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script> -->
         <script src="bower_components/angular/angular.min.js"></script>
-    <script src="bower_components/angular-route/angular-route.min.js"></script>
+        <script src="bower_components/angular-route/angular-route.min.js"></script>
         <script src="bower_components/angular-animate/angular-animate.min.js"></script>
         <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
         <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 
 
         <script src="scripts/app.js"></script>
-  <script src="scripts/controllers/cardsController.js"></script>
-
-  <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-      <script src="scripts/directives/cardDirective.js"></script>
+        <script src="scripts/controllers/cardsController.js"></script>
+        <script src="scripts/controllers/scroll.js"></script>
+        <script src="scripts/directives/cardDirective.js"></script>
 </head>
 <body>
 
@@ -31,17 +31,17 @@
 <div ng-repeat="outfit in myIndexCtrl.outfit">
   {{outfit}} -->
 <!-- </div> -->
-<div class="container">
+<div ng-controller="pageController" class="container">
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
      <p class="navbar-text shout">Sherie Carter</p>
      <div id="navbar" class="navbar-collapse collapse">
          <ul class="nav navbar-nav navbar-right">
-           <li><a href="#work-experiences">Portfolio</a></li>
-           <!-- <li class="bullet">&bull;</li> -->
-           <li><a href="#about">About</a></li>
-           <!-- <li class="bullet">&bull;</li> -->
-           <li><a href="#contact">Contact</a></li>
+           <li><a id="portfolioScroll" ng-click="scrollTo('portfolioSection')">Portfolio</a></li>
+
+           <li><a id="aboutScroll" ng-click="scrollTo('portfolioSection')">About</a></li>
+
+           <li><a id="contactScroll" ng-click="scrollTo('contactSection')">Contact</a></li>
          </ul>
        </div>
     </div>
@@ -58,7 +58,7 @@
 
 
 </div>
-  <div class="container-fluid portfolio text-center">
+  <div id="portfolioSection" class="container-fluid portfolio text-center">
     <p><h1>Portfolio</h1></p>
     <!-- <div class="col-sm-4">
     <div class="card card-inverse">
@@ -103,7 +103,7 @@
 
 
 
-  <div class="container-fluid end text-center">
+  <div id="contactSection" class="container-fluid end text-center">
     <p><h1>Contact Me</h1></p>
     <h2><a href="mailto:sherie1.carter@gmail.com"> sherie1.carter@gmail.com </a></h2>
      <a target="_blank" href="https://www.linkedin.com/in/sheriecarter"> <img src="/linkedIn.png"> </a>
